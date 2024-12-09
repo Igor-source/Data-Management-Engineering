@@ -28,3 +28,27 @@ Clean and prepare the data in Jupyter Notebook so that it is suitable for loadin
 6. Stores the results in a PostgreSQL database
 7. Model
 
+## Project Structure
+```
+project_root/
+│
+├── Split_Mordred_set/       # Split into multiple CSV files due to large size. Contains all descriptors from the Mordred library.
+├── Split_data_Merged_data/  # Split into multiple CSV files due to large size. This is the merged dataset of Mordred, RdKit, and new_qm9 descriptors.
+├── .gitignore               # Specifies intentionally untracked files to ignore.
+├── Merged_data2.csv         # A merged dataset in CSV format.
+├── NewDataset.csv           # A new dataset generated for analysis.
+├── Project1.ipynb           # Extracting descriptors from Mordred and RdKit.
+├── Project2.ipynb           # Feature selection methods: Pearson correlation and visualization.
+├── Project3.ipynb           # Data curation: encoding categorical data, detecting outliers.
+├── Project4 (1).ipynb       # Feature transformation methods: PCA and t-SNE.
+├── Project5.ipynb           # Demonstration of additional data processing methods using t-SNE.
+├── Project6.ipynb           # Model training with XGBoost and LightGBM.
+├── README.md                # Project documentation.
+├── RdKitSet.csv             # Dataset containing RdKit descriptors.
+├── Without_HOMO_LUMO.csv    # Final dataset prepared for PostgreSQL database upload.
+├── new_qm9.csv              # The original dataset used initially.
+├── split_csv.ipynb          # Script to split large datasets into smaller parts.
+└── transformed_df.csv       # Dataset after normalization and dimensionality reduction.
+```
+
+## 🚀 Getting Started
