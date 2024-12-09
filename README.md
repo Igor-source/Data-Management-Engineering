@@ -51,4 +51,46 @@ project_root/
 └── transformed_df.csv       # Dataset after normalization and dimensionality reduction.
 ```
 
+Вот текст с сохранённой разметкой и переводом:
+
 ## 🚀 Getting Started
+To start working on the project, you need to create a separate environment. To do this, run the following command in the terminal.  
+```
+conda env export > environment.yml
+```
+Then create the environment based on `environment.yml`:  
+```
+conda env create -f environment.yml
+```
+
+## Чистка датасета и обучение модели  
+For molecule optimization:  
+- Use the model to predict the gap of new molecules.  
+- Based on the importance of descriptors, change key parameters (e.g. cyclicity,  
+mass) to obtain molecules with the desired gap.  
+
+For model selection:  
+LightGBM is better because it:  
+- Predicts more accurately (lower MSE, RMSE, MAE).  
+- Learns faster.  
+- Explains data better (high R²).  
+
+## Загрузка данных в PostgreSQL  
+To do this, you need to install the `psycopg2` library:  
+```
+conda install psycopg2
+```  
+After that, you need to connect to the server using the following details:  
+```
+pgconn = psycopg2.connect(
+    host='localhost',
+    user='postgres',
+    password='123456QWERTY',
+    database='postgres')
+```
+Данные можно увидеть войдя в pgAdmin 4 и введя данные, которые находятся выше. После введите следующий SQL запрос
+```
+Select * from my_table LIMIT 10
+```
+Remember: This is a learning tool, not a production-ready solution. Use it to understand concepts and build your own improved versions!
+
