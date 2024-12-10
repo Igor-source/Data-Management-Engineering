@@ -51,8 +51,6 @@ project_root/
 └── transformed_df.csv       # Dataset after normalization and dimensionality reduction.
 ```
 
-Вот текст с сохранённой разметкой и переводом:
-
 ## 🚀 Getting Started
 To start working on the project, you need to create a separate environment. To do this, run the following command in the terminal.  
 ```
